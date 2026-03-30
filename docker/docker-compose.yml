@@ -1,7 +1,29 @@
-version: '3.8'
-
 services:
-  db:
+  complyx-server:
+    build:
+      context: https://github.com/styxiner/complyx-server
+      dockerfile: Dockerfile
+    image: complyx-server:latest
+    ports:
+      - "9000:9000"
+
+  complyx-api:
+    build:
+      context: https://github.com/styxiner/complyx-api
+      dockerfile: Dockerfile
+    image: complyx-api:latest
+    ports: 
+      - "9001:9001"
+
+  complyx-ui:
+    build:
+      context: https://github.com/styxiner/complyx-ui
+      dockerfile: Dockerfile
+    image: complyx-ui:latest
+    ports:
+      - "9002:9002"
+
+  complyx-db:
     image: postgres:18.1-alpine3.23
     container_name: complyx-db
     environment:

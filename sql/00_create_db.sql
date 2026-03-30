@@ -1,0 +1,6 @@
+CREATE DATABASE complyx;
+
+CREATE USER complyx WITH PASSWORD 'complyx';
+
+ALTER DATABASE complyx OWNER to complyx;
+GRANT ALL PRIVILEGES ON DATABASE complyx TO complyx;
