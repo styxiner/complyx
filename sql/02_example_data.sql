@@ -49,7 +49,8 @@ WHERE (a.hostname IN ('web01','web02') AND g.name = 'Servidores Web')
 
 -- 6. Normativa NIS2
 INSERT INTO regulations (id, name, pdf_path, added_date, last_modification) VALUES
-    (gen_random_uuid(), 'Directiva NIS2 (UE) 2022/2555', '/pdfs/nis2_2022_2555.pdf', now(), now());
+    (gen_random_uuid(), 'Directiva NIS2 (UE) 2022/2555', '/pdfs/nis2_2022_2555.pdf', now(), now()),
+    (gen_random_uuid(), 'ISO/IEC 27001:2022', '/pdfs/iso_iec-27001:2022.pdf', now(), now());
 
 -- Obtener el ID de NIS2 para usarlo después
 WITH nis2 AS (SELECT id FROM regulations WHERE name LIKE 'Directiva NIS2%')

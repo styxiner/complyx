@@ -1,40 +1,43 @@
 services:
-  complyx-server:
-    build:
-      context: https://github.com/styxiner/complyx-server
-      dockerfile: Dockerfile
-    image: complyx-server:latest
-    ports:
-      - "9000:9000"
-
-  complyx-api:
-    build:
-      context: https://github.com/styxiner/complyx-api
-      dockerfile: Dockerfile
-    image: complyx-api:latest
-    ports: 
-      - "9001:9001"
-
-  complyx-ui:
-    build:
-      context: https://github.com/styxiner/complyx-ui
-      dockerfile: Dockerfile
-    image: complyx-ui:latest
-    ports:
-      - "9002:9002"
-
-  complyx-db:
-    image: postgres:18.1-alpine3.23
-    container_name: complyx-db
+  database:
+    image: postgres:18
+    container_name: complyx-database
+    restart: unless-stopped
     environment:
-      POSTGRES_USER: complyx
-      POSTGRES_PASSWORD: complyx
-      POSTGRES_DB: complyx-db
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
+      - postgres_data:/var/lib/postgresql
+    networks:
+      - backend
+    expose:
+      - "5432"
 
+  api:
+    build: https://github.com/styxiner/complyx-api.git
+    container_name: complyx-api
+    restart: unless-stopped
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/${DATABASE_NAME}
+      SPRING_DATASOURCE_USERNAME: ${DATABASE_USER}
+      SPRING_DATASOURCE_PASSWORD: ${DATABASE_PASSWORD}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      JWT_SECRET: ${JWT_SECRET}
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-prod}
+    ports:
+      - "8080:8080"
+    networks:
+      - backend
+    mem_limit: 4g
+    cpus: "2.0"
+    read_only: true
+    tmpfs:
+      - /tmp
 volumes:
   postgres_data:
     driver: local
+
+networks:
+  backend:
+    driver: bridge
