@@ -1,25 +1,50 @@
 services:
-  database:
-    image: postgres:18
+  complyx-database:
+    image: postgres:18-alpine
     container_name: complyx-database
-    restart: unless-stopped
+    restart: no
     environment:
       POSTGRES_DB: ${DATABASE_NAME}
       POSTGRES_USER: ${DATABASE_USER}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql
-    networks:
-      - backend
-    expose:
-      - "5432"
+    healthcheck:
+      #test: ["CMD-SHELL", "pg_isready", "-d", "complyx"]
+      test: ["CMD-SHELL", "pg_isready -U complyx"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
-  api:
+  complyx-server:
+    build: https://github.com/styxiner/complyx-server.git
+    container_name: complyx-server
+    restart: no
+    environment:
+      COMPLYX_DATABASE_URL: postgres://${DATABASE_USER}:${DATABASE_PASSWORD}@complyx-database/${DATABASE_NAME}
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    depends_on:
+      complyx-database:
+        condition: service_healthy
+    volumes:
+      - pki_data:/var/lib/complyx/pki
+      - ./config/server.toml:/etc/complyx/server.toml:ro
+    healthcheck:
+      test:
+        ["CMD-SHELL", "nc -z localhost 9000 && nc -z localhost 9001 || exit 1"]
+      interval: 5s
+      timeout: 5s
+      start_period: 10s
+      retries: 5
+
+  complyx-api:
     build: https://github.com/styxiner/complyx-api.git
     container_name: complyx-api
-    restart: unless-stopped
+    restart: no
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/${DATABASE_NAME}
+      SPRING_DATASOURCE_URL: jdbc:postgresql://complyx-database:5432/${DATABASE_NAME}
       SPRING_DATASOURCE_USERNAME: ${DATABASE_USER}
       SPRING_DATASOURCE_PASSWORD: ${DATABASE_PASSWORD}
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
@@ -27,17 +52,21 @@ services:
       SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-prod}
     ports:
       - "8080:8080"
-    networks:
-      - backend
     mem_limit: 4g
     cpus: "2.0"
     read_only: true
     tmpfs:
       - /tmp
+    depends_on:
+      complyx-database:
+        condition: service_healthy
+    healthcheck:
+      test:
+        ["CMD-SHELL", "nc -z localhost 8080 || exit 1"]
+      interval: 5s
+      timeout: 5s
+      start_period: 10s
+      retries: 5
 volumes:
   postgres_data:
-    driver: local
-
-networks:
-  backend:
-    driver: bridge
+  pki_data:
