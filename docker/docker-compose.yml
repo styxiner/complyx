@@ -7,6 +7,8 @@ services:
       POSTGRES_DB: ${DATABASE_NAME}
       POSTGRES_USER: ${DATABASE_USER}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+    ports:
+      - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql
     healthcheck:
@@ -22,6 +24,7 @@ services:
     restart: no
     environment:
       COMPLYX_DATABASE_URL: postgres://${DATABASE_USER}:${DATABASE_PASSWORD}@complyx-database/${DATABASE_NAME}
+      COMPLYX_SERVER_HOSTNAMES: "complyx-server,localhost,127.0.0.1"
     ports:
       - "9000:9000"
       - "9001:9001"
