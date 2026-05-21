@@ -1,0 +1,215 @@
+site_name: Complyx
+site_description: Plataforma integral de gestión de riesgos y cumplimiento normativo para endpoints Linux y Windows
+#site_url: https://styxiner.github.io/complyx
+site_url: https://complyx.styxiner.dev
+repo_url: https://github.com/styxiner/complyx
+repo_name: styxiner/complyx
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: es
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
+plugins:
+  - search:
+      lang: es
+  - tags
+  - glightbox
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      title: En esta página
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: styxiner
+      repo: complyx
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - tables
+
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/styxiner/complyx
+  tags:
+    Agent: agent
+    Server: server
+    API: api
+    UI: ui
+    Security: security
+    Database: database
+    Compliance: compliance
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+copyright: "&copy; 2026; Proyecto Complyx"
+
+nav:
+  - Inicio: index.md
+  - Primeros pasos:
+    - getting-started/index.md
+    - Instalación: getting-started/installation.md
+    - Configuración rápida: getting-started/quickstart.md
+    - Requisitos del sistema: getting-started/requirements.md
+    - Despliegue con Docker: getting-started/docker.md
+  - Arquitectura:
+    - architecture/index.md
+    - Visión general: architecture/overview.md
+    - Componentes del sistema: architecture/components.md
+    - Comunicación y PKI: architecture/pki-mtls.md
+    - Flujo de datos: architecture/data-flow.md
+  - Módulos:
+    - complyx-agent:
+      - modules/complyx-agent/index.md
+      - Motor de políticas: modules/complyx-agent/policy-engine.md
+      - Comprobaciones y remediaciones: modules/complyx-agent/checks-remediations.md
+      - Persistencia local (SQLite): modules/complyx-agent/local-storage.md
+      - Logging y auditoría: modules/complyx-agent/logging.md
+      - Configuración: modules/complyx-agent/configuration.md
+    - complyx-server:
+      - modules/complyx-server/index.md
+      - Orquestación de agentes: modules/complyx-server/orchestration.md
+      - PKI interna: modules/complyx-server/pki.md
+      - Gestión de grupos: modules/complyx-server/groups.md
+      - Distribución de políticas: modules/complyx-server/policy-distribution.md
+      - Configuración: modules/complyx-server/configuration.md
+    - complyx-api:
+      - modules/complyx-api/index.md
+      - Autenticación y roles: modules/complyx-api/auth.md
+      - Endpoints — Usuarios: modules/complyx-api/endpoints-users.md
+      - Endpoints — Agentes: modules/complyx-api/endpoints-agents.md
+      - Endpoints — Políticas: modules/complyx-api/endpoints-policies.md
+      - Endpoints — Normativas: modules/complyx-api/endpoints-regulations.md
+      - Endpoints — Riesgos: modules/complyx-api/endpoints-risks.md
+      - Endpoints — Informes: modules/complyx-api/endpoints-reports.md
+      - Manejo de errores: modules/complyx-api/errors.md
+      - Configuración: modules/complyx-api/configuration.md
+    - complyx-ui:
+      - modules/complyx-ui/index.md
+      - Dashboard: modules/complyx-ui/dashboard.md
+      - Gestión de agentes: modules/complyx-ui/agents.md
+      - Gestión de políticas: modules/complyx-ui/policies.md
+      - Matriz de riesgos: modules/complyx-ui/risk-matrix.md
+      - Normativas: modules/complyx-ui/regulations.md
+      - Eventos y logs: modules/complyx-ui/events-logs.md
+      - Informes de cumplimiento: modules/complyx-ui/reports.md
+      - Configuración: modules/complyx-ui/configuration.md
+  - Base de datos:
+    - database/index.md
+    - Modelo entidad-relación: database/erd.md
+    - Esquema del servidor (PostgreSQL): database/schema-server.md
+    - Esquema del agente (SQLite): database/schema-agent.md
+    - Migraciones: database/migrations.md
+  - Seguridad:
+    - security/index.md
+    - Modelo de amenazas: security/threat-model.md
+    - Autenticación mTLS: security/mtls.md
+    - Control de acceso por roles (RBAC): security/rbac.md
+    - Gestión de riesgos: security/risk-management.md
+    - Política de mínimo privilegio: security/least-privilege.md
+  - Cumplimiento normativo:
+    - compliance/index.md
+    - ISO/IEC 27001: compliance/iso27001.md
+    - ENS (Esquema Nacional de Seguridad): compliance/ens.md
+    - Directiva NIS2: compliance/nis2.md
+  - Desarrollo:
+    - development/index.md
+    - Contribuir al proyecto: development/contributing.md
+    - Guía de estilo: development/code-style.md
+    - Entorno de desarrollo: development/dev-environment.md
+    - Testing: development/testing.md
+    - CI/CD: development/cicd.md
+  - Referencia:
+    - reference/index.md
+    - Glosario: reference/glossary.md
+    - Changelog: reference/changelog.md
+    - Licencia: reference/license.md

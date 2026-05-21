@@ -10,18 +10,15 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      #- postgres_data:/var/lib/postgresql/data
       - postgres_data:/var/lib/postgresql
     healthcheck:
-      #test: ["CMD-SHELL", "pg_isready", "-d", "${DATABASE_NAME}", "-U", "${DATABASE_USER}"]
       test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
-      #test: ["CMD-SHELL", "pg_isready -U ${DATABASE_USER} -d ${DATABASE_NAME}"]
       interval: 5s
       timeout: 5s
       retries: 5
 
   complyx-server:
-    build: https://github.com/styxiner/complyx-server.git
+    build: https://github.com/styxiner/complyx-server.git#v0.1.0
     container_name: complyx-server
     restart: no
     environment:
@@ -45,7 +42,7 @@ services:
       retries: 5
 
   complyx-api:
-    build: https://github.com/styxiner/complyx-api.git
+    build: https://github.com/styxiner/complyx-api.git#v0.1.0
     container_name: complyx-api
     restart: no
     environment:
@@ -74,7 +71,7 @@ services:
       retries: 5
 
   complyx-ui:
-    build: https://github.com/styxiner/complyx-ui.git#develop
+    build: https://github.com/styxiner/complyx-ui.git#v0.1.0
     container_name: complyx-ui
     restart: no
     environment:
