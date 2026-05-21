@@ -10,10 +10,12 @@ services:
     ports:
       - "5432:5432"
     volumes:
+      #- postgres_data:/var/lib/postgresql/data
       - postgres_data:/var/lib/postgresql
     healthcheck:
-      #test: ["CMD-SHELL", "pg_isready", "-d", "complyx"]
-      test: ["CMD-SHELL", "pg_isready -U complyx"]
+      #test: ["CMD-SHELL", "pg_isready", "-d", "${DATABASE_NAME}", "-U", "${DATABASE_USER}"]
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      #test: ["CMD-SHELL", "pg_isready -U ${DATABASE_USER} -d ${DATABASE_NAME}"]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -36,7 +38,7 @@ services:
       - ./config/server.toml:/etc/complyx/server.toml:ro
     healthcheck:
       test:
-        ["CMD-SHELL", "nc -z localhost 9000 && nc -z localhost 9001 || exit 1"]
+        ["CMD-SHELL", "nc -z 127.0.0.1 9000 && nc -z 127.0.0.1 9001 || exit 1"]
       interval: 5s
       timeout: 5s
       start_period: 10s
@@ -65,11 +67,31 @@ services:
         condition: service_healthy
     healthcheck:
       test:
-        ["CMD-SHELL", "nc -z localhost 8080 || exit 1"]
+        ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
       interval: 5s
       timeout: 5s
       start_period: 10s
       retries: 5
+
+  complyx-ui:
+    build: https://github.com/styxiner/complyx-ui.git#develop
+    container_name: complyx-ui
+    restart: no
+    environment:
+      - BACKEND_URL=http://complyx-api:8080
+    ports:
+      - "4200:80"
+    depends_on:
+      complyx-api:
+        condition: service_healthy
+    healthcheck:
+      test:
+        ["CMD-SHELL", "nc -z 127.0.0.1 80 || nz -z 127.0.0.1 4200 || exit 1"]
+      interval: 5s
+      timeout: 5s
+      start_period: 10s
+      retries: 5
+
 volumes:
   postgres_data:
   pki_data:
