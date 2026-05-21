@@ -1,271 +1,271 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://styxiner.github.io/complyx/</loc>
+         <loc>https://complyx.styxiner.dev/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/architecture/</loc>
+         <loc>https://complyx.styxiner.dev/architecture/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/architecture/components/</loc>
+         <loc>https://complyx.styxiner.dev/architecture/components/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/architecture/data-flow/</loc>
+         <loc>https://complyx.styxiner.dev/architecture/data-flow/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/architecture/overview/</loc>
+         <loc>https://complyx.styxiner.dev/architecture/overview/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/architecture/pki-mtls/</loc>
+         <loc>https://complyx.styxiner.dev/architecture/pki-mtls/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/compliance/</loc>
+         <loc>https://complyx.styxiner.dev/compliance/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/compliance/ens/</loc>
+         <loc>https://complyx.styxiner.dev/compliance/ens/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/compliance/iso27001/</loc>
+         <loc>https://complyx.styxiner.dev/compliance/iso27001/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/compliance/nis2/</loc>
+         <loc>https://complyx.styxiner.dev/compliance/nis2/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/database/</loc>
+         <loc>https://complyx.styxiner.dev/database/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/database/erd/</loc>
+         <loc>https://complyx.styxiner.dev/database/erd/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/database/migrations/</loc>
+         <loc>https://complyx.styxiner.dev/database/migrations/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/database/schema-agent/</loc>
+         <loc>https://complyx.styxiner.dev/database/schema-agent/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/database/schema-server/</loc>
+         <loc>https://complyx.styxiner.dev/database/schema-server/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/development/</loc>
+         <loc>https://complyx.styxiner.dev/development/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/development/cicd/</loc>
+         <loc>https://complyx.styxiner.dev/development/cicd/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/development/code-style/</loc>
+         <loc>https://complyx.styxiner.dev/development/code-style/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/development/contributing/</loc>
+         <loc>https://complyx.styxiner.dev/development/contributing/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/development/dev-environment/</loc>
+         <loc>https://complyx.styxiner.dev/development/dev-environment/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/development/testing/</loc>
+         <loc>https://complyx.styxiner.dev/development/testing/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/getting-started/</loc>
+         <loc>https://complyx.styxiner.dev/getting-started/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/getting-started/docker/</loc>
+         <loc>https://complyx.styxiner.dev/getting-started/docker/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/getting-started/installation/</loc>
+         <loc>https://complyx.styxiner.dev/getting-started/installation/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/getting-started/quickstart/</loc>
+         <loc>https://complyx.styxiner.dev/getting-started/quickstart/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/getting-started/requirements/</loc>
+         <loc>https://complyx.styxiner.dev/getting-started/requirements/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-agent/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-agent/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-agent/checks-remediations/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-agent/checks-remediations/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-agent/configuration/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-agent/configuration/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-agent/local-storage/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-agent/local-storage/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-agent/logging/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-agent/logging/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-agent/policy-engine/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-agent/policy-engine/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-api/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-api/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-api/auth/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-api/auth/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-api/configuration/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-api/configuration/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-api/endpoints-agents/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-api/endpoints-agents/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-api/endpoints-policies/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-api/endpoints-policies/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-api/endpoints-regulations/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-api/endpoints-regulations/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-api/endpoints-reports/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-api/endpoints-reports/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-api/endpoints-risks/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-api/endpoints-risks/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-api/endpoints-users/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-api/endpoints-users/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-api/errors/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-api/errors/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-server/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-server/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-server/configuration/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-server/configuration/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-server/groups/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-server/groups/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-server/orchestration/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-server/orchestration/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-server/pki/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-server/pki/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-server/policy-distribution/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-server/policy-distribution/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-ui/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-ui/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-ui/agents/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-ui/agents/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-ui/configuration/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-ui/configuration/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-ui/dashboard/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-ui/dashboard/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-ui/events-logs/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-ui/events-logs/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-ui/policies/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-ui/policies/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-ui/regulations/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-ui/regulations/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-ui/reports/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-ui/reports/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/modules/complyx-ui/risk-matrix/</loc>
+         <loc>https://complyx.styxiner.dev/modules/complyx-ui/risk-matrix/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/reference/</loc>
+         <loc>https://complyx.styxiner.dev/reference/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/reference/changelog/</loc>
+         <loc>https://complyx.styxiner.dev/reference/changelog/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/reference/glossary/</loc>
+         <loc>https://complyx.styxiner.dev/reference/glossary/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/reference/license/</loc>
+         <loc>https://complyx.styxiner.dev/reference/license/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/security/</loc>
+         <loc>https://complyx.styxiner.dev/security/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/security/least-privilege/</loc>
+         <loc>https://complyx.styxiner.dev/security/least-privilege/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/security/mtls/</loc>
+         <loc>https://complyx.styxiner.dev/security/mtls/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/security/rbac/</loc>
+         <loc>https://complyx.styxiner.dev/security/rbac/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/security/risk-management/</loc>
+         <loc>https://complyx.styxiner.dev/security/risk-management/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://styxiner.github.io/complyx/security/threat-model/</loc>
+         <loc>https://complyx.styxiner.dev/security/threat-model/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
 </urlset>
