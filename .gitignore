@@ -3,6 +3,8 @@
 
 docker/docker-compose.override.yml
 
+site/
+
 ansible/inventory
 ansible/inventory/*
 !ansible/inventory/*.example
